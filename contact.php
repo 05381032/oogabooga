@@ -1,5 +1,3 @@
-
-
 <!doctype html>
 <?php include "template.php" ?>
 <html lang="en">
@@ -26,6 +24,19 @@
         <button type="submit" name="formSubmit" class="btn btn-primary">Submit</button>
     </form>
 </div>
+
+<?php
+if (isset($_POST['fromsubmit'])) {
+    $userEmail = sanitiseData($_POST['contactEmail']);
+    $userMessage = sanitiseData($_POST['contactEmail']);
+
+    echo $userEmail;
+    echo"<p>";
+    echo $userMessage;
+}
+
+?>
+
 <?php echo footer () ?>
 </body>
 <script src="js/bootstrap.bundle.min.js" ></script>
