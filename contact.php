@@ -26,7 +26,7 @@
 </div>
 
 <?php
-if (isset($_POST['fromsubmit'])) {
+if (isset($_POST['fromSubmit'])) {
     $userEmail = sanitiseData($_POST['contactEmail']);
     $userMessage = sanitiseData($_POST['contactEmail']);
 
