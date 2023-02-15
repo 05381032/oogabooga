@@ -36,8 +36,7 @@ if (isset($_POST['fromSubmit'])) {
 }
 
 ?>
-
 <?php echo footer () ?>
-</body>
+/body>
 <script src="js/bootstrap.bundle.min.js" ></script>
 </html>
