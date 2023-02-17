@@ -10,11 +10,9 @@
 </head>
 <body>
 <h1>Contact Us</h1>
-<script src="js/bootstrap.bundle.min.js" ></script>
-</html>
 <div class="container-fluid">
     <h1 class"text-primary">please send us a message </h1>
-    <form action="contact.php" method="post">
+    <form action="contact2.php" method="post">
         <div class="mb-3">
             <label for="inputEmail" class="form-label">Email address</label>
             <input type="email" class="form-control" id="inputEmail" name="inputEmail" aria-describedby="emailHelp">
@@ -22,7 +20,7 @@
         </div>
         <div class="mb-3">
             <label for="inputMessage" class="form-label">Message</label>
-            <input type="text" class="form-control" id="inputMessage" name="inputMessage">
+            <textarea type="text" class="form-control" id="inputMessage" name="inputMessage"></textarea>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
@@ -42,9 +40,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $emailAddress = $_POST['inputEmail'];
         $messageSubmitted = $_POST['inputMessage'];
-        echo $emailAddress;
-        echo "<p>";
-        echo $messageSubmitted;
+        $csvfile = fopen("contact.csv", "a");
+        fwrite($csvfile, $emailAddress . "," . $messageSubmitted);
+        fclose($csvfile);
     }
 }
 ?>
+</body>
+<script src="js/bootstrap.bundle.min.js" ></script>
+</html>
