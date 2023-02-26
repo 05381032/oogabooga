@@ -56,7 +56,6 @@
     </form>
 </div>
 <?php
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 // Customer Details
     $cusNameFirst = sanitiseData($_POST['customerNameFirst']);
