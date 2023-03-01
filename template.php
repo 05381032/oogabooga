@@ -19,6 +19,12 @@
                 <li class="nav-item">
                     <a class="nav-link" href="contact2.php">Lcontact us</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="orderForm.php">Order Form</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="invoice.php">Invoice</a>
+                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Dropdown
