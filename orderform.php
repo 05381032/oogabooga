@@ -70,6 +70,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $prodQuantity3 = sanitiseData($_POST['orderProduct3']);
     $prodQuantity4 = sanitiseData($_POST['orderProduct4']);
     $prodQuantity5 = sanitiseData($_POST['orderProduct5']);
+    if ($prodQuantity1 < 0) {
+        $prodQuantity1 = 0;
+    }
+    if ($prodQuantity2 < 0) {
+        $prodQuantity2= 0;
+    }
+    if ($prodQuantity3 < 0) {
+        $prodQuantity3= 0;
+    }
+    if ($prodQuantity4 < 0) {
+        $prodQuantity4= 0;
+    }
+    if ($prodQuantity5< 0) {
+        $prodQuantity5= 0;
+    }
     $csvFile = fopen("orders.csv", "a");
 // Write the string to the end of the file.
     fwrite($csvFile, $cusNameFirst . "," . $cusNameSecond . "," . $cusAddress . "," . $cusEmail . "," . $cusPhone . "," . $prodQuantity1 . "," . $prodQuantity2 . "," . $prodQuantity3 . "," . $prodQuantity4 . "," . $prodQuantity5 . "," . "\n");
