@@ -23,10 +23,10 @@ if (($handle = fopen("orders.csv", "r")) !== FALSE) {
         $prod3Quantity = $data[7];
         $prod4Quantity = $data[8];
         $prod5Quantity = $data[9];
-        $prod1ItemCost = 3.4;
-        $prod2ItemCost = 5.0;
-        $prod3ItemCost = 12.54;
-        $prod4ItemCost = 19.77;
+        $prod1ItemCost = 1.0;
+        $prod2ItemCost = 1.0;
+        $prod3ItemCost = 1.54;
+        $prod4ItemCost = 1.77;
         $prod5ItemCost = 1.01;
 
         $prod1SubTotal = $prod1Quantity * $prod1ItemCost;
