@@ -1,5 +1,6 @@
 <?php include "template.php"
 /** @var $productPrices */
+/** @var $productNames  */
 ?>
 <title>Invoice</title>
 <body>
@@ -92,31 +93,31 @@ if (($handle = fopen("orders.csv", "r")) !== FALSE) {
 
     <div class="row">
         <div class="col-lg-3"><?php echo $productNames["product1"]; ?></div>
-        <div class="col-lg-3">$<?= $prod1ItemCost ?></div>
+        <div class="col-lg-3">$<?= $productPrices["product1"]; ?></div>
         <div class="col-lg-3"><?= $prod1Quantity ?></div>
         <div class="col-lg-3">$<?= $prod1SubTotal ?></div>
     </div>
     <div class="row">
         <div class="col-lg-3"><?php echo $productNames["product2"]; ?></div>
-        <div class="col-lg-3">$<?= $prod2ItemCost ?></div>
+        <div class="col-lg-3">$<?= $productPrices["product2"]; ?></div>
         <div class="col-lg-3"><?= $prod2Quantity ?></div>
         <div class="col-lg-3">$<?= $prod2SubTotal ?></div>
     </div>
     <div class="row">
         <div class="col-lg-3"><?php echo $productNames["product3"]; ?></div>
-        <div class="col-lg-3">$<?= $prod3ItemCost ?></div>
+        <div class="col-lg-3">$<?= $productPrices["product3"]; ?></div>
         <div class="col-lg-3"><?= $prod3Quantity ?></div>
         <div class="col-lg-3">$<?= $prod3SubTotal ?></div>
     </div>
     <div class="row">
         <div class="col-lg-3"><?php echo $productNames["product4"]; ?></div>
-        <div class="col-lg-3">$<?= $prod4ItemCost ?></div>
+        <div class="col-lg-3">$<?= $productNames["product4"]; ?></div>
         <div class="col-lg-3"><?= $prod4Quantity ?></div>
         <div class="col-lg-3">$<?= $prod4SubTotal ?></div>
     </div>
     <div class="row">
         <div class="col-lg-3"><?php echo $productNames["product5"]; ?></div>
-        <div class="col-lg-3">$<?= $prod5ItemCost ?></div>
+        <div class="col-lg-3">$<?= $productNames["product5"]; ?></div>
         <div class="col-lg-3"><?= $prod5Quantity ?></div>
         <div class="col-lg-3">$<?= $prod5SubTotal ?></div>
     </div>
