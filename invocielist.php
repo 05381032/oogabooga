@@ -1,4 +1,6 @@
-<?php include "template.php" ?>
+<?php include "template.php"
+/** @var $Conn */
+?>
 <title>Invoice</title>
 <body>
 

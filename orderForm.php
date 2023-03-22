@@ -1,5 +1,6 @@
 <?php include "template.php"
 /** @var $productNames */
+/** @var $Conn */
 ?>
 <title>Order Form</title>
 <body>

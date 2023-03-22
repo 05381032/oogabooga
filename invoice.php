@@ -1,6 +1,7 @@
 <?php include "template.php"
 /** @var $productPrices */
 /** @var $productNames  */
+/** @var $Conn */
 ?>
 <title>Invoice</title>
 <body>

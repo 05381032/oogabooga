@@ -1,6 +1,8 @@
 
 <!doctype html>
-<?php include "template.php" ?>
+<?php include "template.php"
+/** @var $Conn */
+?>
 <html lang="en">
 <head>
     <meta charset="utf-8">

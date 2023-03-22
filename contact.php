@@ -1,5 +1,8 @@
 
-<?php include "template.php" ?>
+<?php include "template.php";
+/** @var $conn */
+?>
+
 <title>Contact Us</title>
 <body>
 <h1>Contact Us</h1>
@@ -21,16 +24,22 @@
 
 <?php
 if (isset($_POST['fromSubmit'])) {
-    $userEmail = sanitiseData($_POST['contactEmail']);
-    $userMessage = sanitiseData($_POST['contactEmail']);
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $userEmail = sanitiseData($_POST['contactEmail']);
+        $userMessage = sanitiseData($_POST['contactEmail']);
 
-    echo $userEmail;
-    echo"<p>";
-    echo $userMessage;
+        $sqlStmt = $conn->prepare("INSERT INTO Contact (ContactEmail, Message) VALUES  (:ContactEmail, :Message)");
+        $sqlStmt->bindParam(':ContactEmail', $userEmail);
+        $sqlStmt->bindParam('Message', $userMessage);
+        $sqlStmt->execute();
+
+//    $csvFile = fopen("contact.csv", "a");
+//    fwrite($csvFile, $userEmail.",".$userMessage."\n");
+//    fclose($csvFile);
+    }
 }
-
 ?>
 <?php echo footer () ?>
-/body>
+</body>
 <script src="js/bootstrap.bundle.min.js" ></script>
 </html>
