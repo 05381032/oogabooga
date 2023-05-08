@@ -1,35 +1,35 @@
 <?php include "template.php";
 /**  @var $conn */
 ?>
-<title>User Registration</title>
-<h1 class='text-primary'>User Registration</h1>
+    <title>User Registration</title>
+    <h1 class='text-primary'>User Registration</h1>
 
-<!-- Front End -->
-<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" enctype="multipart/form-data">
-    <div class="container-fluid">
-        <div class="row">
-            <!--Customer Details-->
+    <!-- Front End -->
+    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" enctype="multipart/form-data">
+        <div class="container-fluid">
+            <div class="row">
+                <!--Customer Details-->
 
-            <div class="col-md-6">
-                <h2>Account Details</h2>
-                <p>Please enter wanted username and password:</p>
-                <p>Email Address<input type="text" name="username" class="form-control" required="required"></p>
-                <p>Password<input type="password" name="password" class="form-control" required="required"></p>
+                <div class="col-md-6">
+                    <h2>Account Details</h2>
+                    <p>Please enter wanted username and password:</p>
+                    <p>Email Address<input type="text" name="username" class="form-control" required="required"></p>
+                    <p>Password<input type="password" name="password" class="form-control" required="required"></p>
 
-            </div>
-            <div class="col-md-6">
-                <h2>More Details</h2>
-                <!--Product List-->
-                <p>Please enter More Personal Details:</p>
-                <p>First Name<input type="text" name="firstName" class="form-control" required="required"></p>
-                <p>Second Name<input type="text" name="secondName" class="form-control" required="required"></p>
-                <p>Address<input type="text" name="address" class="form-control" required="required"></p>
-                <p>Phone Number<input type="text" name="phoneNumber" class="form-control" required="required"></p>
+                </div>
+                <div class="col-md-6">
+                    <h2>More Details</h2>
+                    <!--Product List-->
+                    <p>Please enter More Personal Details:</p>
+                    <p>First Name<input type="text" name="firstName" class="form-control" required="required"></p>
+                    <p>Second Name<input type="text" name="secondName" class="form-control" required="required"></p>
+                    <p>Address<input type="text" name="address" class="form-control" required="required"></p>
+                    <p>Phone Number<input type="text" name="phoneNumber" class="form-control" required="required"></p>
+                </div>
             </div>
         </div>
-    </div>
-    <input type="submit" name="formSubmit" value="Submit">
-</form>
+        <input type="submit" name="formSubmit" value="Submit">
+    </form>
 
 
 <?php

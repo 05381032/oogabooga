@@ -10,7 +10,7 @@
 
 <nav class="navbar navbar-expand-sm bg-info">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="#"> <img src="images/logo.png" width="40rem" height="40rem"> </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -30,6 +30,22 @@
                     echo '<li class="nav-item" ><a class="nav-link" href = "invoiceList.php"> Invoice list</a ></li >';
                 } else {
                     echo '<li class="nav-item"><a class="nav-link" href="register.php">Register</a></li>';
+                }
+                if (isset($_SESSION["AccessLevel"])) {
+                    if ($_SESSION["AccessLevel"] == 1) {
+                        ?>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                               aria-expanded="false">
+                                Product Management
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="productAdd.php">Add Products</a></li>
+                                <li><a class="dropdown-item" href="productList.php">Product List</a></li>
+                            </ul>
+                        </li>
+                        <?php
+                    }
                 }
                 ?>
             </ul>

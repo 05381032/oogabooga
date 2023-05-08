@@ -1,11 +1,10 @@
-
 <?php include "template.php";
 /** @var $conn */
 ?>
 
+
 <title>Contact Us</title>
 <body>
-<h1>Contact Us</h1>
 <div class="container-fluid">
     <h1 class="text-primary">Please Send us a Message</h1>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
@@ -22,24 +21,34 @@
     </form>
 </div>
 
-<?php
-if (isset($_POST['fromSubmit'])) {
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $userEmail = sanitiseData($_POST['contactEmail']);
-        $userMessage = sanitiseData($_POST['contactEmail']);
 
-        $sqlStmt = $conn->prepare("INSERT INTO Contact (ContactEmail, Message) VALUES  (:ContactEmail, :Message)");
-        $sqlStmt->bindParam(':ContactEmail', $userEmail);
-        $sqlStmt->bindParam('Message', $userMessage);
-        $sqlStmt->execute();
+<?php
+//if (isset($_POST['formSubmit'])) {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $userEmail = sanitiseData($_POST['contactEmail']);
+    $userMessage = sanitiseData($_POST['contactMessage']);
+
+    $sqlStmt = $conn->prepare("INSERT INTO Contact (ContactEmail, Message) VALUES (:ContactEmail, :Message)");
+    $sqlStmt->bindParam(':ContactEmail', $userEmail);
+    $sqlStmt->bindParam(':Message', $userMessage);
+    $sqlStmt->execute();
+
+
+
+
+
 
 //    $csvFile = fopen("contact.csv", "a");
 //    fwrite($csvFile, $userEmail.",".$userMessage."\n");
 //    fclose($csvFile);
-    }
 }
+
 ?>
-<?php echo footer () ?>
+
+
+
+
+<?php echo footer() ?>
 </body>
-<script src="js/bootstrap.bundle.min.js" ></script>
+<script src="js/bootstrap.bundle.min.js"></script>
 </html>
