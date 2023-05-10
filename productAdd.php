@@ -26,7 +26,9 @@ if ($_SESSION['AccessLevel'] == 1) {
                          <input type="text" name="prodCategory" class="form-control" required="required">
 <!--                        <select name="prodCategory">-->
 <!--                            --><?php
-//                            while ($row = $query->fetchArray()) {
+//                            } else {
+                        //    header("location:index.php");
+                        //}  while ($row = $query->fetchArray()) {
 //                                echo '<option>' . $row[0] . '</option>';
 //                            }
 //                            ?>
