@@ -11,7 +11,7 @@
 //        // Customer Details
 //        $cusNameFirst = $data[0];
 //        $cusNameSecond = $data[1];
-//        echo "<p><a href='invoice.php?invoiceNumber=" . $currentRow . "'>" . $cusNameFirst . " " . $cusNameSecond . "</a></p>";
+//        echo "<p><a href='invoiceold.php?invoiceNumber=" . $currentRow . "'>" . $cusNameFirst . " " . $cusNameSecond . "</a></p>";
 //
 //        $currentRow++; //Add one to the current row
 //    }
