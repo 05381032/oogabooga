@@ -1,17 +1,15 @@
 
 <?php
 include "template.php";
-/*
- * The invoices page has a number of use cases to satisfy:
-        1. If user is not logged in, then redirect them to index.php
-        2. Users to view their "open" orders as a list.
-        3. Users to view invoices from individual orders (using the order variable in url, e.g `invoice.php?order=234`)
-        4. Inform users if they have not previously made any orders.
-        5. Administrators to view all orders
-        6. Administrators can OPEN and CLOSE orders
-
-  @var $conn
+/** @var $conn
  */
+// The invoices page has a number of use cases to satisfy:
+//        1. If user is not logged in, then redirect them to index.php
+//        2. Users to view their "open" orders as a list.
+//        3. Users to view invoices from individual orders (using the order variable in url, e.g `invoice.php?order=234`)
+//        4. Inform users if they have not previously made any orders.
+//        5. Administrators to view all orders
+//        6. Administrators can OPEN and CLOSE orders
 if (!isset($_SESSION["CustomerID"])) {
     // Case 1. The user is not logged in.
     header("Location:index.php");
