@@ -7,7 +7,7 @@
     <div class="row">
         <div class="col-6">
             <p>username: 0538102@schoolsnet.act.edu.au</p>
-            <p>Password: password</p>
+            <p>Password: bingus</p>
             <p>username: admin@admin.com</p>
             <p>Password: admin</p>
         </div>
